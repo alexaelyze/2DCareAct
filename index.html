@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>CareAct</title>
+
+    <style>
+    /* SIDE IMAGES */
+    .side-img {
+        position: fixed;
+        bottom: 80px;
+        height: 75%;
+        max-height: 100%;
+        z-index: 0;
+    }
+
+    .left-img {
+        left: 0;
+    }
+
+    .right-img {
+        right: 0;
+    }
+
+    /* keep content above images */
+    .whitebox, .center {
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* TABLET */
+@media (max-width: 1024px) {
+
+  .side-img {
+    height: 60%;
+    opacity: 0.4; /* soften so it doesn't dominate */
+  }
+
+  .center {
+    width: 25% !important;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  /* Hide side images (they break layout on phones) */
+  .side-img {
+    display: none;
+  }
+
+  /* Center logo properly */
+  .center {
+    width: 40% !important;
+    display: block;
+    margin: 40px auto 20px auto;
+  }
+
+  /* Fix whitebox spacing */
+  .whitebox {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Buttons full width */
+  .button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+}
+
+/* FOOTER */
+footer{
+  background: #4f6cf5;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 180px;
+}
+
+footer h3{
+  margin: 0;
+  font-size: 18px;
+}
+
+footer p{
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 600px){
+
+  footer{
+    padding: 12px;
+  }
+
+  footer h3{
+    font-size: 16px;
+  }
+
+  footer p{
+    font-size: 12px;
+  }
+
+}
+    
+    </style>
+</head>
+
+<body>
+
+    <main>
+    <!-- LEFT IMAGE -->
+    <img src="icons/caregiver2.png" class="side-img left-img" alt="Elder image 1">
+
+    <!-- RIGHT IMAGE -->
+    <img src="icons/caregiver1.png" class="side-img right-img" alt="Elder image 2">
+
+
+    <img src="CareAct.png" style="width:15%;" class="center" alt="Logo">
+
+    <div class="whitebox">
+        <h1>Welcome!</h1>
+
+        <a href="login.php">
+            <button class="button b">Log-In</button>
+        </a>
+
+        <br>
+
+        <a href="signup.php">
+            <button class="button b">Sign Up</button>
+        </a>
+    </div>
+    
+</main>
+<footer>
+  <h3>CareAct</h3>
+  <p>Web-Based Caregiver Training System</p>
+  <p>© 2025 CareAct | All Rights Reserved</p>
+</footer>
+</body>
+</html>
